@@ -7,9 +7,7 @@
   },
   "workspaces": [
     "packages/*",
-    "templates/*",
-    "examples/*",
-    "site"
+    "templates/*"
   ],
   "scripts": {
     "generate": "lerna run generate",
@@ -17,7 +15,6 @@
     "postinstall": "git submodule update --init --recursive",
     "build": "lerna run build --verbose --ignore=alchemy-daapp --ignore=embedded-accounts-quickstart --ignore=aa-simple-dapp --ignore=ui-demo",
     "build:ci": "yarn build && yarn lint:write",
-    "build:examples": "lerna run build",
     "clean": "lerna run clean",
     "test": "lerna run --verbose test:run",
     "test:e2e": "lerna run --verbose test:run-e2e --concurrency=1 --ignore=@alchemy/aa-signers",
